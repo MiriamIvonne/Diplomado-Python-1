@@ -1,0 +1,10 @@
+def obtener_precio(inventario, producto):
+    precio = inventario.get(producto)
+    if precio is not None:
+        return f"El precio del {producto} es {precio}"
+    else:
+        return f"El producto {producto} no se encuentra en el inventario."
+
+precios = {"manzana":15.5,"pila":25.0,"cuaderno":45.0}
+print(obtener_precio(precios, "manzana"))
+print(obtener_precio(precios, "lapiz"))
