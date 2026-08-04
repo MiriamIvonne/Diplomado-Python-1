@@ -1,1 +1,6 @@
+#Ejercicio 1. Registrador de estudiantes
+def crear_estudiantes(nombre,edad,carrera):
+    return {"Nombre":nombre,"Edad":edad,"Carrera":carrera,"Activo":True}
 
+alumno = crear_estudiantes("Ivonne",30,"Actuaria")
+print(alumno)
