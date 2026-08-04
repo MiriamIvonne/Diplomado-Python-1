@@ -1,0 +1,10 @@
+def filtrar_aprobados(calificaciones, notamin):
+    aprobados = {}
+    for alumno,calif in calificaciones.items():
+        if calif >= notamin:
+            aprobados[alumno] = calif
+    return aprobados
+
+grupo = { "Ana":8.5,"Carlos":5.0,"Sofia":9.0,"Ivonne":7.0}
+aprobados = filtrar_aprobados(grupo,7.0)
+print(aprobados)
