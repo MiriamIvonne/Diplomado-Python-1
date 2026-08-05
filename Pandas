@@ -1,0 +1,25 @@
+#Actividad de clase
+
+import pandas as pd
+
+productos = {"Producto" : ["Manazana","Mango","Uvas","Pera"],
+"Precio" : [60,50,90,80],
+"Existencia" : [1,2,3,4]}
+
+prod = pd.DataFrame(productos)
+
+#1. Mostrar la columna precios
+print(prod["Precio"])
+
+#2. Productos con precio mayor a $500
+print(prod[prod["Precio"] > 500])
+
+#3. Crear IVA
+prod["IVA"] = prod["Precio"] * .16
+
+#4. Crear precio final
+prod["Precio final"] = prod["IVA"] + prod["Precio"]
+print(prod)
+
+#5. Productos con existencia menos a 10
+print(prod[prod["Existencia"] < 10])
